@@ -1,12 +1,12 @@
 async function getCandidates(id){
     return id ? 
-        await fetch(`http://localhost:3000/candidates/${id}`)
+        await fetch(`https://evo-poll.herokuapp.com/candidates/${id}`)
             .then(res => res.json())
             .then(data =>  {
                  return data.candidates;
             }) 
         :
-        await fetch(`http://localhost:3000/candidates`)
+        await fetch(`https://evo-poll.herokuapp.com/candidates`)
             .then(res => res.json())
             .then(data =>  {
                 return data.candidates;

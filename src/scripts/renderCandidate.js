@@ -32,7 +32,7 @@ function addCandidateForm(){
             position: position.value,
             election_id: electionId
         };    
-        fetch('http://localhost:3000/candidates', {
+        fetch('https://evo-poll.herokuapp.com/candidates', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -70,7 +70,7 @@ function renderCandidates(candidates, id){
                 name : selected,
                 election_id: electionId
             }
-            fetch('http://localhost:3000/poll', {
+            fetch('https://evo-poll.herokuapp.com/poll', {
                 method: 'post',
                 body: JSON.stringify(data),
                 headers: new Headers({
