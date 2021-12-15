@@ -1,0 +1,146 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    background-color: #73b387;
+    display: flex;
+    flex: 1;
+}
+a, h1, h2, h3, h4, h5, h6, img{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 100%;
+}
+.nav-container{
+    width: 20vw;
+    min-height: 100vh;
+    height:100%;
+    background-color: #538736;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.05);
+}
+
+
+.profile-container{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    gap: 5px;
+    font-family: 'Anton';
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1);
+}
+.profile-container > img{
+    max-width: 50px;
+    justify-self: center;
+    align-self: center;
+    padding: 5px;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    user-select: none;
+    border-radius: 50%;
+}
+.user-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab-container{
+    font-family: 'Arial';
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.tab-container > a{
+    padding: 10px;
+    cursor: pointer;
+}
+.tab-container > a:not(.active):hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.tab-container > a:active{
+    background-color: rgba(0,0,0,0.2);
+}
+.tab-container > a.active{
+    background-color: rgba(0,0,0,0.2);
+}
+.status{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+.nav-tab{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    user-select: none;
+    text-decoration: none;
+    color: white;
+}
+.tab-text{
+    width: 70%;
+}
+.log-out{
+    justify-self: flex-end;
+}
+.content-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.dash-header{
+    font-family: 'Anton';
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 5px 10px 10px;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 5px;
+}
+.election-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid #488558;
+    padding: 5px;
+    flex-direction: column;
+    color: #0e2d1e;
+    user-select: none;
+    cursor: pointer;
+}
+.election-card:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+.election-card:active{
+    background-color: rgba(0,0,0,0.2);
+}
+.card-title{
+    font-family: Anton, Bebas Neue, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+.card-count{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    align-self: flex-end;
+}
+.election-card > img{
+    max-width: 30%;
+}

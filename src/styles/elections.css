@@ -1,0 +1,37 @@
+.elections-header{
+    font-family: Anton;
+    font-size: x-large;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.line-break{
+    border-color: #81b181;
+}
+.add-btn{
+    font-size: 1.2em;
+    font-family: Arial;
+}
+.add-candidate-container{
+    position: absolute;
+    display: flex;
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    z-index: 100;
+}
+.add-candidate-form{
+    background-color: white;
+    width: 60%;
+    padding:10px;
+}
+.visible{
+    visibility: visible;
+}
+input ~ span{
+    color: black;
+}
