@@ -1,0 +1,47 @@
+
+[type=radio] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+[type=radio] + img {
+    cursor: pointer;
+}
+[type=radio]:checked + img {
+    border: 1px solid black;
+}
+.candidate-poll-container{
+    width: 80%;
+}
+.poll-title{
+    font-size: 2em;
+    text-align: center;
+}
+.poll-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.poll-card{
+    display: flex;
+    flex: 0 0 21%;
+    height:200px;
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.poll-label{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.poll-label > img{
+    padding:10px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    width: 80%;
+}
