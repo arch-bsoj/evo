@@ -1,4 +1,3 @@
-import '../styles/styles.css';
 import '../styles/error.css';
 import * as util from './util.js'
 import errorImg from '../error.png';
