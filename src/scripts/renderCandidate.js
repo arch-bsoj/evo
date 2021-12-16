@@ -140,8 +140,8 @@ function createPoll(candidate, container){
 
 (async () => {
     document.body.prepend(addCandidateForm());
-    document.getElementById('addCandidateForm').addEventListener('click', (e) => {
-        
+    document.getElementById('addCandidateBtn').addEventListener('click', (e) => {
+        document.getElementById('addCandidateForm').classList.add('visible');
         e.preventDefault();
     })
     const paramsString = window.location.href;
