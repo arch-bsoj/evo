@@ -28,7 +28,7 @@ function addElectionForm(){
             position: position.value,
             election_id: electionId
         };    
-        fetch('https://evo-poll.herokuapp.com/candidates', {
+        fetch('https://localhost:3000/candidates', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -75,7 +75,7 @@ function createCard(id, title, total){
 
 function renderElections(){
     const container = document.getElementById("cards");
-    fetch('https://evo-poll.herokuapp.com/elections')
+    fetch('https://localhost:3000/elections')
         .then(res => res.json())
         .then(data => {
             const elections = data.elections;

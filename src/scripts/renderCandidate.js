@@ -70,7 +70,7 @@ function renderCandidates(candidates, id){
                 name : selected,
                 election_id: electionId
             }
-            fetch('https://evo-poll.herokuapp.com/poll', {
+            fetch('https://localhost:3000/poll', {
                 method: 'post',
                 body: JSON.stringify(data),
                 headers: new Headers({
