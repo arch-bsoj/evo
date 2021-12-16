@@ -1,18 +1,3 @@
-.elections-header{
-    font-family: Anton;
-    font-size: x-large;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-}
-.line-break{
-    border-color: #81b181;
-}
-.add-btn{
-    font-size: 1.2em;
-    font-family: Arial;
-}
 .add-candidate-container{
     position: absolute;
     display: flex;
@@ -27,7 +12,7 @@
 .add-candidate-form{
     background-color: white;
     width: 60%;
-    padding:10px;
+    padding: 10px;
 }
 .visible{
     visibility: visible;

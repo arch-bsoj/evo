@@ -12,7 +12,6 @@ const UserSchema = new Schema({
     },
     image:{
         type: String,
-        required: true
     },
     status:{
         type: String,

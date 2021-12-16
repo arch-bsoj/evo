@@ -1,4 +1,5 @@
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -7,6 +8,18 @@ module.exports = {
     elections: './src/scripts/elections.js',
     login: './src/scripts/index.js',
     error: './src/scripts/error.js',
+    renderVoter: './src/scripts/renderVoter.js',
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      extractComments: false,
+      terserOptions: {
+        format: {
+          comments: false,
+        },
+      },
+    })],
   },
   output: {
     filename: '[name].js',

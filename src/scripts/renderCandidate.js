@@ -5,7 +5,9 @@ import '../styles/election_poll.css';
 import * as util from './util.js'
 import { getCandidates } from './api.js'
 
-
+// Set drawer tab to active;
+const tab = document.getElementById('navElection');
+tab.classList.add('active');
 
 let electionId = "none";
 function changeElection(id){
@@ -32,7 +34,7 @@ function addCandidateForm(){
             position: position.value,
             election_id: electionId
         };    
-        fetch('https://evo-poll.herokuapp.com/candidates', {
+        fetch('http://localhost:3000/candidates', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -53,7 +55,6 @@ function addCandidateForm(){
 }
 
 function renderCandidates(candidates, id){
-    console.log(candidates)
     const candidacy_list = document.getElementById('candidacyPosition');
 
     //create container for main content
@@ -134,9 +135,7 @@ function createPoll(candidate, container){
         util.insertChildren(newPoll, [label, name]);
         container.appendChild(newPoll);
         return container;
-        
     }
-
 }
 
 (async () => {
@@ -155,6 +154,6 @@ function createPoll(candidate, container){
         return results;
     }
     // Render candidates
-    candidates().then(res => renderCandidates(res, selected_poll))
+    candidates().then(res => renderCandidates(res, selected_poll));
 })();
 

@@ -19,6 +19,7 @@ dotenv.config({ path: './config/config.env'})
 
 
 // @imports routes
+const users = require('./routes/user');
 const error = require('./routes/error');
 const auth = require('./routes/auth');
 const login = require('./routes/login');
@@ -58,6 +59,7 @@ app.use(cors());
 // @routes ROUTES
 app.use('/error', error)
 app.use('/auth', auth)
+app.use('/', users)
 app.use('/', login)
 app.use('/', poll)
 app.use('/', candidates)

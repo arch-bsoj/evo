@@ -2,8 +2,6 @@ body, html{
     height: 100%;
     margin: 0;
     background-color: #73b387;
-    display: flex;
-    flex: 1;
 }
 a, h1, h2, h3, h4, h5, h6, img{
     margin: 0;
@@ -28,7 +26,6 @@ a, h1, h2, h3, h4, h5, h6, img{
     display: grid;
     grid-template-columns: 2fr 8fr;
     gap: 5px;
-    font-family: 'Anton';
     color: white;
     font-size: 14px;
     width: 100%;
@@ -54,7 +51,6 @@ a, h1, h2, h3, h4, h5, h6, img{
 }
 
 .tab-container{
-    font-family: 'Arial';
     color: white;
     font-weight: bold;
     display: flex;
@@ -63,15 +59,18 @@ a, h1, h2, h3, h4, h5, h6, img{
 }
 .tab-container > a{
     padding: 10px;
+}
+.tab-container > a:not(.active){
     cursor: pointer;
 }
 .tab-container > a:not(.active):hover{
     background-color: rgba(0,0,0,0.1);
 }
-.tab-container > a:active{
-    background-color: rgba(0,0,0,0.2);
-}
 .tab-container > a.active{
+    background-color: rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+.tab-container > a:active{
     background-color: rgba(0,0,0,0.2);
 }
 .status{
@@ -97,9 +96,20 @@ a, h1, h2, h3, h4, h5, h6, img{
     overflow-x: hidden;
 }
 
-
+.content-header{
+    font-size: x-large;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.line-break{
+    border-color: #81b181;
+}
+.add-btn{
+    font-size: 1.2em;
+}
 .dash-header{
-    font-family: 'Anton';
     color: white;
     font-size: 20px;
     width: 100%;
@@ -131,16 +141,30 @@ a, h1, h2, h3, h4, h5, h6, img{
     background-color: rgba(0,0,0,0.2);
 }
 .card-title{
-    font-family: Anton, Bebas Neue, Helvetica, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
 }
 .card-count{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     align-self: flex-end;
 }
 .election-card > img{
     max-width: 30%;
+}
+
+.modal{
+    flex: 1;
+    position: absolute;
+    display: flex;
+    width:100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    z-index: 100;
+}
+.visible{
+    visibility: visible;
 }

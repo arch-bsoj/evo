@@ -2,9 +2,10 @@ import ico from '../temp.png';
 import '../styles/styles.css';
 import '../styles/elections.css';
 import * as util from './util.js'
-import { getCandidates } from './api.js'
 
-
+// Set drawer tab to active;
+const tab = document.getElementById('navElection');
+tab.classList.add('active');
 
 let electionId = "none";
 
@@ -28,7 +29,7 @@ function addElectionForm(){
             position: position.value,
             election_id: electionId
         };    
-        fetch('https://localhost:3000/candidates', {
+        fetch('https://evo-poll.herokuapp.com/candidates', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -75,7 +76,7 @@ function createCard(id, title, total){
 
 function renderElections(){
     const container = document.getElementById("cards");
-    fetch('https://localhost:3000/elections')
+    fetch('https://evo-poll.herokuapp.com/elections')
         .then(res => res.json())
         .then(data => {
             const elections = data.elections;

@@ -1,0 +1,16 @@
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+}
+.voter-container{
+    display: flex;
+    flex-direction: column;
+}
+.voter-container > img{
+    height:100px;
+    width: 100px;
+}
+.voter-container > p{
+    text-align: center;
+}
