@@ -26,7 +26,7 @@ function addCandidateForm(){
     position.addEventListener('input', function(e){
         position.value =  e.srcElement.value;
     })
-    const submit = util.createInput('btn add-candidate', null, "submit", 'addCandidateBtn', {value: "ADD Candidate"})
+    const submit = util.createInput('btn add-candidate', null, "submit", 'submitCandidateBtn', {value: "ADD Candidate"})
     
     form.addEventListener('submit', (e) => {
         const data = { 
@@ -143,11 +143,11 @@ function createPoll(candidate, container){
     document.getElementById('addCandidateBtn').addEventListener('click', (e) => {
         document.getElementById('addCandidateForm').classList.add('visible');
         e.preventDefault();
-    })
+    });
+    // get election_id from url
     const paramsString = window.location.href;
     const selected_poll = new URLSearchParams(paramsString).get('id');
     changeElection(selected_poll);
-    console.log(selected_poll)
     // Wait for WEB to get candidates
     const candidates = async () => {
         const results = await getCandidates(selected_poll);
